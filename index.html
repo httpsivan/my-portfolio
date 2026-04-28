@@ -1,0 +1,870 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ivan Estela Navarro — Portfolio</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <!-- CURSOR -->
+    <div class="cursor" id="cursor"></div>
+    <div class="cursor-ring" id="cursor-ring"></div>
+
+    <!-- ENTRY SCREEN -->
+    <div id="entry-screen">
+      <div class="entry-bg"></div>
+      <div class="entry-grid"></div>
+      <div class="entry-content">
+        <p class="entry-tag">Welcome to my portfolio</p>
+        <h1 class="entry-name">
+          IVAN<br />
+          <span>ESTELA</span><br />
+          NAVARRO
+        </h1>
+        <div class="entry-line"></div>
+        <p class="entry-sub">
+          <span id="entry-typed-roles"></span>
+          <span class="cursor-blink"></span>
+        </p>
+        <button class="entry-btn" onclick="enterSite()">
+          <span>Enter Portfolio</span>
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+            <path
+              d="M1 7h12M7 1l6 6-6 6"
+              stroke="currentColor"
+              stroke-width="1.5"
+              stroke-linecap="round"
+            />
+          </svg>
+        </button>
+      </div>
+      <div class="entry-scroll-indicator">
+        <div class="scroll-line"></div>
+      </div>
+    </div>
+
+    <!-- MAIN SITE -->
+    <div id="main-site">
+      <!-- NAVBAR -->
+      <nav id="navbar">
+        <a href="#home" class="nav-logo">IEN<span>.</span></a>
+        <button
+          id="theme-toggle"
+          class="theme-toggle"
+          aria-label="Toggle theme"
+        >
+          <svg
+            class="sun-icon"
+            width="20"
+            height="20"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+          <svg
+            class="moon-icon"
+            width="20"
+            height="20"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+        </button>
+        <ul class="nav-links" id="nav-links">
+          <li><a href="#home" class="active">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact" class="nav-cta">Contact</a></li>
+        </ul>
+        <button class="hamburger" id="hamburger" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </nav>
+
+      <!-- HOME -->
+      <section id="home">
+        <div class="home-bg">
+          <div class="home-bg-grid"></div>
+          <div class="home-noise"></div>
+        </div>
+        <div class="home-content">
+          <div class="home-left">
+            <div class="home-tag">
+              <span class="home-tag-dot"></span>
+              Available for opportunities
+            </div>
+            <h1 class="home-name">
+              IVAN<br />
+              <span class="line2">ESTELA</span><br />
+              <span class="line3">NAVARRO</span>
+            </h1>
+            <div class="home-roles">
+              <span class="home-roles-prefix">I am a</span>
+              <div class="typing-wrapper">
+                <span id="typed-role"></span>
+                <span class="cursor-blink"></span>
+              </div>
+            </div>
+            <p class="home-desc">
+              Crafting digital experiences that blend elegant design with
+              functional code. Passionate about creating interfaces that feel as
+              good as they look.
+            </p>
+            <div class="home-btns">
+              <a href="#projects" class="btn-primary">View My Work</a>
+              <a href="#contact" class="btn-secondary">Get In Touch</a>
+            </div>
+            <div class="home-socials">
+              <a
+                href="https://www.linkedin.com/in/ivan-navarro-392942325/"
+                class="social-btn"
+                title="LinkedIn"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img
+                  src="linkedin.png"
+                  alt="LinkedIn"
+                  style="width: 40px; height: 40px"
+                />
+              </a>
+              <a
+                href="https://github.com/httpsivan"
+                class="social-btn"
+                title="GitHub"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img
+                  src="github.png"
+                  alt="GitHub"
+                  style="width: 40px; height: 40px"
+                />
+              </a>
+              <a
+                href="https://www.facebook.com/ivan.navarro.47"
+                class="social-btn"
+                title="Facebook"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img
+                  src="FB.png"
+                  alt="Facebook"
+                  style="width: 50px; height: 50px"
+                />
+              </a>
+              <a
+                href="https://www.instagram.com/cheesessupcheese/"
+                class="social-btn"
+                title="Instagram"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img
+                  src="Ig.png"
+                  alt="Instagram"
+                  style="width: 45px; height: 45px"
+                />
+              </a>
+            </div>
+            <div class="home-stats">
+              <div class="home-stat">
+                <span class="stat-num">3+</span>
+                <span class="stat-label">Projects Built</span>
+              </div>
+              <div class="home-stat">
+                <span class="stat-num">3</span>
+                <span class="stat-label">Years Learning</span>
+              </div>
+              <div class="home-stat">
+                <span class="stat-num">100%</span>
+                <span class="stat-label">Passion</span>
+              </div>
+            </div>
+          </div>
+          <div class="home-right">
+            <div class="home-photo-wrapper">
+              <div class="home-photo-ring"></div>
+              <div class="home-photo-ring2"></div>
+              <img
+                src="Ivanid.png"
+                alt="Ivan Estela Navarro"
+                class="home-photo"
+              />
+              <div class="home-photo-glow"></div>
+              <div class="home-photo-badge">
+                <span class="badge-dot"></span>
+                Available for hire
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="home-scroll">
+          <div class="home-scroll-arrow"></div>
+          <span>Scroll</span>
+        </div>
+      </section>
+
+      <!-- ABOUT -->
+      <section id="about">
+        <div class="about-inner">
+          <div class="about-img-wrap reveal">
+            <div class="about-img">
+              <img
+                src="Ivannnn.png"
+                alt="Ivan Estela Navarro"
+                style="
+                  width: 100%;
+                  height: 100%;
+                  object-fit: cover;
+                  display: block;
+                "
+              />
+              <div class="about-img-deco"></div>
+              <div class="about-img-deco2"></div>
+              <div class="about-img-label">Ivan Estela Navarro</div>
+            </div>
+          </div>
+          <div class="about-text">
+            <p class="section-label reveal">About Me</p>
+            <h2 class="section-title reveal">
+              CRAFTING<br /><span>DIGITAL</span><br />EXPERIENCES
+            </h2>
+            <p class="about-bio reveal">
+              Hi, I'm <strong>Ivan Estela Navarro</strong> — a front-end
+              developer and designer based in the Philippines. I specialize in
+              building <strong>visually compelling</strong> and
+              <strong>functionally seamless</strong> web experiences. With a
+              background in both development and design, I bridge the gap
+              between creative vision and technical execution. <br /><br />
+              Whether it's crafting pixel-perfect interfaces, designing
+              intuitive user flows, or building responsive web applications, I
+              bring dedication and attention to detail to every project.
+            </p>
+            <div class="about-details reveal">
+              <div class="detail-item">
+                <div class="detail-label">Location</div>
+                <div class="detail-value">
+                  Garchitorena, Camarines Sur, Philippines
+                </div>
+              </div>
+              <div class="detail-item">
+                <div class="detail-label">Degree</div>
+                <div class="detail-value">BS Information Technology</div>
+              </div>
+              <div class="detail-item">
+                <div class="detail-label">Email</div>
+                <div class="detail-value">navarroivan530@email.com</div>
+              </div>
+              <div class="detail-item">
+                <div class="detail-label">Freelance</div>
+                <div class="detail-value">Available</div>
+              </div>
+              <div class="detail-item">
+                <div class="detail-label">Languages</div>
+                <div class="detail-value">English, Filipino</div>
+              </div>
+              <div class="detail-item">
+                <div class="detail-label">Focus</div>
+                <div class="detail-value">Web &amp; UI/UX Design</div>
+              </div>
+            </div>
+            <div class="reveal">
+              <a
+                href="Ivan E. Navarro - Resume.pdf"
+                download
+                class="btn-primary"
+                >Download CV
+                <svg
+                  width="12"
+                  height="12"
+                  viewBox="0 0 12 12"
+                  fill="none"
+                  style="margin-left: 8px"
+                >
+                  <path
+                    d="M6 1v6m-3-3l3 3 3-3M1 10h10"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SKILLS -->
+      <section id="skills">
+        <div class="skills-inner">
+          <p class="section-label reveal">What I Do</p>
+          <h2 class="section-title reveal">
+            SKILLS &amp; <span>EXPERTISE</span>
+          </h2>
+
+          <!-- Technical Skills -->
+          <div class="skills-grid">
+            <div class="skill-card reveal reveal-delay-1">
+              <div class="skill-card-icon">⚡</div>
+              <div class="skill-card-title">Front-End Development</div>
+              <div class="skill-card-desc">
+                Building responsive, performant web applications with modern
+                technologies and best practices.
+              </div>
+              <div class="skill-tags">
+                <span class="skill-tag">HTML5</span>
+                <span class="skill-tag">CSS3</span>
+                <span class="skill-tag">JavaScript</span>
+                <span class="skill-tag">React</span>
+                <span class="skill-tag">Bootstrap</span>
+              </div>
+            </div>
+            <div class="skill-card reveal reveal-delay-2">
+              <div class="skill-card-icon">🎨</div>
+              <div class="skill-card-title">UI/UX Design</div>
+              <div class="skill-card-desc">
+                Designing intuitive user interfaces and experiences grounded in
+                research and usability principles.
+              </div>
+              <div class="skill-tags">
+                <span class="skill-tag">Figma</span>
+                <span class="skill-tag">Prototyping</span>
+                <span class="skill-tag">Wireframing</span>
+                <span class="skill-tag">User Research</span>
+              </div>
+            </div>
+            <div class="skill-card reveal reveal-delay-3">
+              <div class="skill-card-icon">✏️</div>
+              <div class="skill-card-title">Graphic Design</div>
+              <div class="skill-card-desc">
+                Creating visual identities, brand assets, and digital graphics
+                with a strong eye for aesthetics.
+              </div>
+              <div class="skill-tags">
+                <span class="skill-tag">Adobe PS</span>
+                <span class="skill-tag">Illustrator</span>
+                <span class="skill-tag">Typography</span>
+                <span class="skill-tag">Branding</span>
+              </div>
+            </div>
+            <div class="skill-card reveal reveal-delay-1">
+              <div class="skill-card-icon">🛠️</div>
+              <div class="skill-card-title">Dev Tools &amp; Workflow</div>
+              <div class="skill-card-desc">
+                Comfortable with modern development workflows, version control,
+                and deployment pipelines.
+              </div>
+              <div class="skill-tags">
+                <span class="skill-tag">Git</span>
+                <span class="skill-tag">GitHub</span>
+                <span class="skill-tag">VS Code</span>
+                <span class="skill-tag">Vercel</span>
+              </div>
+            </div>
+            <div class="skill-card reveal reveal-delay-2">
+              <div class="skill-card-icon">📱</div>
+              <div class="skill-card-title">Responsive Design</div>
+              <div class="skill-card-desc">
+                Ensuring pixel-perfect experiences across all screen sizes from
+                mobile to widescreen displays.
+              </div>
+              <div class="skill-tags">
+                <span class="skill-tag">Mobile-First</span>
+                <span class="skill-tag">Flexbox</span>
+                <span class="skill-tag">CSS Grid</span>
+                <span class="skill-tag">Media Queries</span>
+              </div>
+            </div>
+            <div class="skill-card reveal reveal-delay-3">
+              <div class="skill-card-icon">🗄️</div>
+              <div class="skill-card-title">Database Management</div>
+              <div class="skill-card-desc">
+                Designing, querying, and optimizing relational databases to
+                ensure data integrity and seamless backend integration.
+              </div>
+              <div class="skill-tags">
+                <span class="skill-tag">SQL</span>
+                <span class="skill-tag">MySQL</span>
+                <span class="skill-tag">Relational Databases</span>
+                <span class="skill-tag">Data Architecture</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Proficiency Bars -->
+          <div
+            class="skills-bars reveal"
+            style="margin-top: 4rem; max-width: 680px"
+          >
+            <div class="skills-bars-title">Technical Proficiency</div>
+            <div class="skill-bar-item">
+              <div class="skill-bar-header">
+                <span class="skill-bar-name">HTML / CSS</span>
+                <span class="skill-bar-pct">80%</span>
+              </div>
+              <div class="skill-bar-track">
+                <div class="skill-bar-fill" data-pct="80"></div>
+              </div>
+            </div>
+            <div class="skill-bar-item">
+              <div class="skill-bar-header">
+                <span class="skill-bar-name">JavaScript</span>
+                <span class="skill-bar-pct">40 %</span>
+              </div>
+              <div class="skill-bar-track">
+                <div class="skill-bar-fill" data-pct="40"></div>
+              </div>
+            </div>
+            <div class="skill-bar-item">
+              <div class="skill-bar-header">
+                <span class="skill-bar-name">Figma / UI Design</span>
+                <span class="skill-bar-pct">95%</span>
+              </div>
+              <div class="skill-bar-track">
+                <div class="skill-bar-fill" data-pct="88"></div>
+              </div>
+            </div>
+          </div>
+          <!-- end skills-bars -->
+
+          <div class="tools-section reveal" style="margin-top: 4rem">
+            <div class="skills-bars-title">Software & Tools</div>
+            <div class="tools-grid">
+              <div class="tool-item">
+                <img src="canva.png" alt="Canva" />
+                <span>Canva</span>
+              </div>
+              <div class="tool-item">
+                <img src="capcut.png" alt="CapCut" />
+                <span>CapCut</span>
+              </div>
+              <div class="tool-item">
+                <img src="affinity.png" alt="Affinity" />
+                <span>Affinity</span>
+              </div>
+              <div class="tool-item">
+                <img src="figma.svg" alt="Figma" />
+                <span>Figma</span>
+              </div>
+              <div class="tool-item">
+                <img src="photoshop.png" alt="Photoshop" />
+                <span>Photoshop</span>
+              </div>
+              <div class="tool-item">
+                <img src="visual studio code.png" alt="Visual Studio Code" />
+                <span>VS Code</span>
+              </div>
+              <div class="tool-item">
+                <img src="lr.png" alt="Lightroom" />
+                <span>Lightroom</span>
+              </div>
+              <div class="tool-item">
+                <img src="netbeans.png" alt="Lightroom" />
+                <span>Netbeans</span>
+              </div>
+            </div>
+          </div>
+          <!-- end tools-section -->
+
+          <div style="margin-top: 5rem">
+            <p class="section-label reveal">Beyond Code</p>
+            <h3
+              class="section-title reveal"
+              style="font-size: clamp(1.8rem, 4vw, 3.5rem)"
+            >
+              INTERESTS &amp; <span>PASSIONS</span>
+            </h3>
+            <div class="interests-grid" style="margin-top: 2.5rem">
+              <div class="interest-card reveal reveal-delay-1">
+                <div class="interest-icon">🤿</div>
+                <div class="interest-name">Free Diving</div>
+              </div>
+              <div class="interest-card reveal reveal-delay-2">
+                <div class="interest-icon">🍳</div>
+                <div class="interest-name">Baking & Cooking</div>
+              </div>
+              <div class="interest-card reveal reveal-delay-3">
+                <div class="interest-icon">🎮</div>
+                <div class="interest-name">Game Design</div>
+              </div>
+
+              <div class="interest-card reveal reveal-delay-4">
+                <div class="interest-icon">✈️</div>
+                <div class="interest-name">Traveling</div>
+              </div>
+              <div class="interest-card reveal reveal-delay-5">
+                <div class="interest-icon">📸</div>
+                <div class="interest-name">Photography</div>
+              </div>
+              <div class="interest-card reveal reveal-delay-6">
+                <div class="interest-icon">⛰️</div>
+                <h4 class="interest-name">Hiking</h4>
+              </div>
+
+              <div class="interest-card reveal reveal-delay-7">
+                <div class="interest-icon">📖</div>
+                <div class="interest-name">Reading</div>
+              </div>
+
+              <div class="interest-card reveal reveal-delay-7">
+                <div class="interest-icon">🎨</div>
+                <div class="interest-name">Graphic Design</div>
+              </div>
+
+              <div class="interest-card reveal reveal-delay-8">
+                <div class="interest-icon">🎬</div>
+                <div class="interest-name">Watching Movies</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- end skills-inner -->
+      </section>
+
+      <!-- PROJECTS -->
+      <section id="projects">
+        <div class="projects-inner">
+          <p class="section-label reveal">Featured Work</p>
+          <h2 class="section-title reveal">MY <span>PROJECTS</span></h2>
+          <p class="projects-overview reveal">
+            A few things I've built and designed — some to solve real problems,
+            some just to learn something new. Every project taught me something
+            I didn't know before.
+          </p>
+          <div class="projects-grid">
+            <div class="project-card reveal reveal-delay-1">
+              <div class="project-img">
+                <div class="project-img-bg">
+                  <img
+                    src="calculator-screenshot.png"
+                    alt="Calculator Project Screenshot"
+                    style="
+                      width: 100%;
+                      height: 100%;
+                      object-fit: cover;
+                      display: block;
+                    "
+                  />
+                </div>
+                <div class="project-img-overlay"></div>
+                <div class="project-num">01</div>
+              </div>
+              <div class="project-body">
+                <div class="project-tags">
+                  <span class="project-tag">HTML</span>
+                  <span class="project-tag">CSS3</span>
+                  <span class="project-tag">JavaScript</span>
+                </div>
+                <div class="project-title">Calculator</div>
+                <div class="project-desc">
+                  A simple yet fully functional calculator built with HTML, CSS,
+                  and JavaScript, handling basic arithmetic operations and
+                  responsive for various screen sizes.
+                </div>
+                <div class="project-links">
+                  <a
+                    href="https://httpsivan.github.io/my-calculator-project/calculator.html"
+                    class="project-link"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >Live Demo <span class="project-link-arrow">→</span></a
+                  >
+                  <a
+                    href="https://github.com/httpsivan/my-calculator-project"
+                    class="project-link"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >GitHub <span class="project-link-arrow">→</span></a
+                  >
+                </div>
+              </div>
+            </div>
+
+            <div class="project-card reveal reveal-delay-2">
+              <div class="project-img">
+                <!-- Removed duplicate project-img-bg with "BRAND" text -->
+                <div class="project-img-bg">
+                  <img
+                    src="Kumusta.png"
+                    alt="Kumusta Project Screenshot"
+                    style="
+                      width: 100%;
+                      height: 100%;
+                      object-fit: cover;
+                      display: block;
+                    "
+                  />
+                </div>
+                <div class="project-img-overlay"></div>
+                <div class="project-num">02</div>
+              </div>
+              <div class="project-body">
+                <div class="project-tags">
+                  <span class="project-tag">Figma</span>
+                  <span class="project-tag">UI/UX</span>
+                  <span class="project-tag">Prototype</span>
+                </div>
+                <div class="project-title">Kumusta</div>
+                <div class="project-desc">
+                  a mental well-being prototype demonstrating features for mood
+                  tracking, self-care tools, and a supportive community.
+                </div>
+                <div class="project-links">
+                  <a
+                    href="https://www.figma.com/design/3w1OlY2zfGTeVL3uoNh7xV/Untitled?node-id=0-1&t=T1NYIII1gaDIbP9d-1"
+                    class="project-link"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >View Figma <span class="project-link-arrow">→</span></a
+                  >
+                </div>
+              </div>
+            </div>
+
+            <div class="project-card reveal reveal-delay-3">
+              <div class="project-img">
+                <div class="project-img-bg">
+                  <img
+                    src="PayDaily.png"
+                    alt="PayDaily Web-Based POS System Screenshot"
+                    style="
+                      width: 100%;
+                      height: 100%;
+                      object-fit: cover;
+                      display: block;
+                    "
+                  />
+                </div>
+                <div class="project-img-overlay"></div>
+                <div class="project-num">03</div>
+              </div>
+              <div class="project-body">
+                <div class="project-tags">
+                  <span class="project-tag">HTML</span>
+                  <span class="project-tag">CSS</span>
+                  <span class="project-tag">JavaScript</span>
+                  <span class="project-tag">Web Application</span>
+                  <span class="project-tag">POS System</span>
+                </div>
+                <div class="project-title">PayDaily</div>
+                <div class="project-desc">
+                  A comprehensive web-based Point-of-Sale (POS) and financial
+                  management information system developed, designed to
+                  streamline sales, inventory, and financial tracking
+                  operations.
+                </div>
+                <div class="project-links">
+                  <a
+                    href="https://httpsivan.github.io/PayDaily/"
+                    class="project-link"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >Live Demo <span class="project-link-arrow">→</span></a
+                  >
+                  <a
+                    href="https://github.com/httpsivan/PayDaily"
+                    class="project-link"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >GitHub <span class="project-link-arrow">→</span></a
+                  >
+                </div>
+              </div>
+            </div>
+
+            <div class="project-card reveal reveal-delay-4">
+              <div class="project-img">
+                <div class="project-img-bg">
+                  <img
+                    src="Portfoliohome.png"
+                    alt="Personal Portfolio Screenshot"
+                    style="
+                      width: 100%;
+                      height: 100%;
+                      object-fit: cover;
+                      display: block;
+                    "
+                  />
+                </div>
+                <div class="project-img-overlay"></div>
+                <div class="project-num">04</div>
+              </div>
+              <div class="project-body">
+                <div class="project-tags">
+                  <span class="project-tag">HTML</span>
+                  <span class="project-tag">CSS</span>
+                  <span class="project-tag">JavaScript</span>
+                  <span class="project-tag">UI/UX</span>
+                </div>
+                <div class="project-title">Personal Portfolio</div>
+                <div class="project-desc">
+                  A custom-built, responsive portfolio website designed to
+                  showcase my web development projects, design skills, and
+                  professional journey. Features dark/light mode and modern
+                  animations.
+                </div>
+                <div class="project-links">
+                  <a href="#home" class="project-link"
+                    >Live Demo <span class="project-link-arrow">→</span></a
+                  >
+                  <a
+                    href="https://github.com/httpsivan"
+                    class="project-link"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >GitHub <span class="project-link-arrow">→</span></a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CONTACT -->
+      <section id="contact">
+        <div class="contact-inner">
+          <div class="contact-info">
+            <p class="section-label reveal">Say Hello</p>
+            <h2 class="section-title reveal">
+              LET'S <span>WORK</span><br />TOGETHER
+            </h2>
+            <p class="contact-info-desc reveal">
+              Have a project in mind or just want to connect? Drop me a message
+              and I'll get back to you as soon as possible.
+            </p>
+
+            <div class="contact-items reveal">
+              <div class="contact-item">
+                <div class="contact-item-icon">✉</div>
+                <div>
+                  <div class="contact-item-label">Email</div>
+                  <div class="contact-item-val">navarroivan530@email.com</div>
+                </div>
+              </div>
+              <div class="contact-item">
+                <div class="contact-item-icon">📍</div>
+                <div>
+                  <div class="contact-item-label">Location</div>
+                  <div class="contact-item-val">
+                    Garchitorena, Camarines Sur, Philippines
+                  </div>
+                </div>
+              </div>
+              <div class="contact-item">
+                <div class="contact-item-icon">⏰</div>
+                <div>
+                  <div class="contact-item-label">Response Time</div>
+                  <div class="contact-item-val">Within 24 hours</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="contact-form reveal">
+            <form id="contact-form">
+              <div class="form-row">
+                <div class="form-group">
+                  <input
+                    type="text"
+                    class="form-input"
+                    placeholder="Your Name"
+                    name="name"
+                    required
+                    id="form-name"
+                  />
+                </div>
+                <div class="form-group">
+                  <input
+                    type="email"
+                    class="form-input"
+                    placeholder="Email Address"
+                    name="email"
+                    required
+                    id="form-email"
+                  />
+                </div>
+              </div>
+              <div class="form-group">
+                <input
+                  type="text"
+                  class="form-input"
+                  placeholder="Subject"
+                  name="subject"
+                  id="form-subject"
+                />
+              </div>
+              <div class="form-group">
+                <textarea
+                  class="form-textarea"
+                  placeholder="Your message..."
+                  name="message"
+                  required
+                  id="form-message"
+                ></textarea>
+              </div>
+              <button type="submit" class="form-submit">
+                <span>Send Message</span>
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                  <path
+                    d="M1 8l14-7-7 14-2-5-5-2z"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </button>
+              <p class="form-notice">
+                Messages are sent securely. Your info is kept private and never
+                shared.
+              </p>
+            </form>
+            <div class="form-success" id="form-success">
+              <div class="form-success-icon">✓</div>
+              <div class="form-success-msg">Message sent successfully!</div>
+              <div class="form-success-sub">
+                Thank you for reaching out. I'll get back to you within 24
+                hours.
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- FOOTER -->
+      <footer>
+        <a href="#home" class="footer-name">IEN<span>.</span></a>
+        <div class="footer-copy">
+          © 2025 Ivan Estela Navarro. All rights reserved.
+        </div>
+      </footer>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
