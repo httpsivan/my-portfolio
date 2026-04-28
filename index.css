@@ -2458,4 +2458,15 @@ footer {
   .entry-name {
     font-size: clamp(2.5rem, 15vw, 5rem);
   }
+
+  /* Remove custom cursor on mobile */
+  body {
+    cursor: auto !important;
+  }
+  .cursor, .cursor-ring {
+    display: none !important;
+  }
+  .entry-btn, .hamburger, .form-submit {
+    cursor: pointer !important;
+  }
 }
