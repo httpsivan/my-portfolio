@@ -1,0 +1,5 @@
+# Node dependencies (good to have for the future)
+node_modules/
+
+# macOS specific files
+.DS_Store

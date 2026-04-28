@@ -2159,6 +2159,12 @@ section {
   transform: translateY(-2px);
 }
 
+.social-btn img {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+}
+
 
 .form-row {
   display: grid;
