@@ -2143,14 +2143,14 @@ section {
 }
 
 .social-btn {
-  width: 40px;
-  height: 40px;
+  width: 65px; 
+  height: 65px;
   display: flex;
   align-items: center;
   justify-content: center;
   color: var(--text2);
   text-decoration: none;
-  font-size: 0.9rem;
+  font-size: 40px; /* Increased to match the 40px img size */
   transition: all 0.3s;
 }
 
@@ -2160,9 +2160,15 @@ section {
 }
 
 .social-btn img {
-  width: 24px;
-  height: 24px;
+  width: 40px; /* Adjust the actual visible icon size */
+  height: 40px;
   object-fit: contain;
+}
+
+.social-btn i,
+.social-btn svg {
+  width: 40px;
+  height: 40px;
 }
 
 
